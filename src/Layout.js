@@ -4,52 +4,52 @@ import {StyleSheet, Text, View, ScrollView} from 'react-native';
 export default class Layout extends React.Component {
     render() {
         return (
-                <ScrollView style={styles.innerContainer}>
-                    <View style={styles.subViewRow}>
-                        <View style={styles.subModuleRow}></View>
-                        <View style={styles.subModuleRow}></View>
-                        <View style={styles.subModuleRow}></View>
-                        <View style={styles.subModuleRow}></View>
+            <ScrollView style={styles.innerContainer}>
+                <View style={styles.subViewRow}>
+                    <View style={styles.subModuleRow}></View>
+                    <View style={styles.subModuleRow}></View>
+                    <View style={styles.subModuleRow}></View>
+                    <View style={styles.subModuleRow}></View>
+                </View>
+                <View style={styles.subViewColumn}>
+                    <View style={styles.subModuleColumn}></View>
+                    <View style={styles.subModuleColumn}></View>
+                    <View style={styles.subModuleColumn}></View>
+                    <View style={styles.subModuleColumn}></View>
+                </View>
+                <View style={styles.subViewAlignItems}>
+                    <View style={styles.subModuleAlignItems}></View>
+                    <View style={styles.subModuleAlignItems}></View>
+                    <View style={[styles.subModuleAlignItems, styles.subModuleAlignSelf]}></View>
+                    <View style={styles.subModuleAlignItems}></View>
+                </View>
+                <View style={styles.subViewJustifyContent}>
+                    <View style={styles.subModuleJustifyContent}></View>
+                    <View style={[styles.subModuleJustifyContent, styles.subModuleJustifyContent1]}></View>
+                    <View style={styles.subModuleJustifyContent}></View>
+                    <View style={styles.subModuleJustifyContent}></View>
+                </View>
+                <View style={[styles.innerContainer, styles.boxContainer]}>
+                    <View style={styles.box1}>
+                        <Text style={styles.text}>1</Text>
                     </View>
-                    <View style={styles.subViewColumn}>
-                        <View style={styles.subModuleColumn}></View>
-                        <View style={styles.subModuleColumn}></View>
-                        <View style={styles.subModuleColumn}></View>
-                        <View style={styles.subModuleColumn}></View>
+                    <View style={styles.box2}>
+                        <Text style={styles.text}>2</Text>
                     </View>
-                    <View style={styles.subViewAlignItems}>
-                        <View style={styles.subModuleAlignItems}></View>
-                        <View style={styles.subModuleAlignItems}></View>
-                        <View style={[styles.subModuleAlignItems, styles.subModuleAlignSelf]}></View>
-                        <View style={styles.subModuleAlignItems}></View>
+                    <View style={styles.box3}>
+                        <Text style={styles.text}>3</Text>
                     </View>
-                    <View style={styles.subViewJustifyContent}>
-                        <View style={styles.subModuleJustifyContent}></View>
-                        <View style={[styles.subModuleJustifyContent, styles.subModuleJustifyContent1]}></View>
-                        <View style={styles.subModuleJustifyContent}></View>
-                        <View style={styles.subModuleJustifyContent}></View>
+                </View>
+                <View style={[styles.innerContainer, styles.boxContainer]}>
+                    <View style={styles.box4}>
+                        <Text style={styles.text}>1</Text>
+                        <View style={styles.ball}/>
                     </View>
-                    <View style={[styles.innerContainer, styles.boxContainer]}>
-                        <View style={styles.box1}>
-                            <Text style={styles.text}>1</Text>
-                        </View>
-                        <View style={styles.box2}>
-                            <Text style={styles.text}>2</Text>
-                        </View>
-                        <View style={styles.box3}>
-                            <Text style={styles.text}>3</Text>
-                        </View>
+                    <View style={styles.box5}>
+                        <Text style={styles.text}>2 Cardmaker App</Text>
                     </View>
-                    <View style={[styles.innerContainer, styles.boxContainer]}>
-                        <View style={styles.box4}>
-                            <Text style={styles.text}>1</Text>
-                            <View style={styles.ball}/>
-                        </View>
-                        <View style={styles.box5}>
-                            <Text style={styles.text}>2</Text>
-                        </View>
-                    </View>
-                </ScrollView>
+                </View>
+            </ScrollView>
         );
     }
 }
@@ -68,7 +68,7 @@ const styles = StyleSheet.create({
     },
     boxContainer: {
         height: 300,
-        backgroundColor:'#a8e0f7'
+        backgroundColor: '#a8e0f7'
     },
     subViewRow: {
         flex: 1,
@@ -158,7 +158,8 @@ const styles = StyleSheet.create({
     },
     text: {
         color: '#ffffff',
-        fontSize: 80
+        fontSize: 32,
+        fontFamily: 'Billabong',
     },
     box4: {
         position: 'relative',
@@ -172,7 +173,7 @@ const styles = StyleSheet.create({
         position: 'absolute',
         top: 100,
         left: 100,
-        width: 100,
+        width: 200,
         height: 100,
         backgroundColor: 'blue'
     },
