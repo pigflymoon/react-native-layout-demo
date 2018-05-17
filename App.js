@@ -85,7 +85,6 @@ const styles = StyleSheet.create({
         alignItems: 'center',
         justifyContent: 'space-between',//space-around, space-between,flex-start,flex-end,center
         height: 150,
-        // width: 500,
         backgroundColor: '#eef7a5'
     },
     subModuleJustifyContent: {
